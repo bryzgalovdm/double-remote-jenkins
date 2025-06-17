@@ -55,7 +55,7 @@ This repository provides a concrete example and documentation for synchronizing 
 
 3.  **Configure Jenkins:**
     * **Credentials:** Add the credentials (API tokens, SSH keys, etc.) for your dedicated Git provider entities to Jenkins Credentials Manager. Note the credential IDs used.
-    * **Pipeline:** Create a new Jenkins Pipeline job and configure it to use the `Jenkinsfile` from this repository (either directly pasted or via SCM). You will likely need to update credential IDs and repository URLs within the `Jenkinsfile` or configure them as job parameters.
+    * **Pipeline:** Create a new Jenkins Pipeline job and configure it to use the `Jenkinsfile` from this repository (via SCM, **otherwise the webhooks will not work**). You will likely need to update credential IDs and repository URLs within the `Jenkinsfile` or configure them as job parameters.
     * **Webhook Listener:** Configure Jenkins to receive webhooks from your Git providers. This might involve generic webhook triggers or specific SCM integration plugins that can parse payloads. The pipeline needs to identify the source repository from the webhook.
 
 4.  **Configure Repositories:**
