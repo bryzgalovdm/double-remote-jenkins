@@ -22,12 +22,7 @@ There are no Apps on GitLab, so we need to create a dedicated service account:
    - Add the service account as a member with "Maintainer" role. Give only this user a possibility to push and merge to the protected main branch.
 
 4. Set up webhook for GitLab to Jenkins (if you want bidirectional sync):
-   - Go to Settings → Webhooks
-   - URL: Your webhook relay URL that points to Jenkins
-   - Secret token: Generate a secure token and store it in Jenkins
-   - Trigger events: Select "Push events" and specify the branch (main)
-   - SSL verification: Enable if your Jenkins uses HTTPS
-   - Click "Add webhook"
+   - See [here](gitlab_webhook_setup.md) for details
 
 5. Store credentials in Jenkins:
    - Add the GitLab PAT to Jenkins credentials store (as a secret text)
